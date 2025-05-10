@@ -1,8 +1,9 @@
+# 📱 Aplicativo Rede Âncora + API Spring Boot
 
-# 📱 Aplicativo Rede Âncora
+Este projeto consiste em um **sistema composto por dois módulos integrados**:
 
-Aplicativo Android desenvolvido para aproximar mecânicos e oficinas das mais de 840 lojas franqueadas da Rede Âncora, permitindo a visualização, busca, cotação e gerenciamento de peças automotivas.
-
+1. **Backend Spring Boot**: Serve como intermediário entre o Firebase e o aplicativo.
+2. **Aplicativo Android**: Consome a API REST para exibir e interagir com os dados de peças automotivas.
 ---
 
 ## 📌 Objetivo do Projeto
@@ -32,9 +33,23 @@ O projeto nasceu a partir da necessidade de **facilitar o relacionamento entre m
 
 ---
 
+### ✅ Backend Spring Boot
+
+| Metodo HTTP    | Função                        | Descrição                                                                 |
+|----------------|-------------------------------|---------------------------------------------------------------------------|
+| GET            | /api/pecas                    | Lista todas as peças                                                      |
+| GET            | /api/pecas/favoritas          | Retorna todas as peças marcadas como favoritas                            |
+| GET            | /api/categorias               | Retorna todas as categorias de peças                                      |
+| GET            | /api/pecas/{id}               | Retorna uma peça específica pelo id                                       |
+| PUT            | /api/pecas/{id}/favorito      | Atualiza o status de favorito de uma peça (requer apiKey)                 |
+
+---
+
 ## 🧱 Estrutura de Código
 
 ```
+📁 aplicativo-rede-ancora/
+├── api/ # Projeto Spring Boot
 📁 br.com.redeAncora.app
 ├── Activity/
 │   ├── IntroActivity.java
