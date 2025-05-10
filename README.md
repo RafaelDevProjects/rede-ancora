@@ -137,28 +137,35 @@ O projeto nasceu a partir da necessidade de **facilitar o relacionamento entre m
    ```bash
    git clone https://github.com/RafaelDevProjects/appMobileRedeAncora.git
    ```
-### 1. Backend (Spring Boot)
-```bash
-cd api/
-```
-- Coloque seu arquivo firebase-service-account.json em src/main/resources/
-- Verifique se a SECRET_KEY está configurada corretamente nas regras do Firebase e no código da API
-Execute a aplicação:
-   ```bash
-   ./mvnw spring-boot:run
-   ```
-A API estará acessível por padrão em:
-```http://localhost:8080/api/pecas```
-```http://localhost:8080/api/categorias```
-```http://localhost:8080/api/favoritas```
+2. **Backend (Spring Boot)**
+    ```bash
+    cd api/
+    ```
+    - Coloque seu arquivo **firebase-service-account.json em src/main/resources/**
+  
+    - Verifique se a **SECRET_KEY** está configurada corretamente nas regras do Firebase e no código da API
+    
+    Execute a aplicação:
+       ```
+       ./mvnw spring-boot:run
+       ```
+    **A API estará acessível por padrão em:**
+    - ```http://localhost:8080/api/pecas```
+    - ```http://localhost:8080/api/categorias```
+    - ```http://localhost:8080/api/favoritas```
+
    
-### 1. Aplicativo Android (Spring Boot)
-2. **Abra o projeto no Android Studio:**
-   - Certifique-se de ter o Android Studio instalado.
-3. **Execute o aplicativo:**
-   - Utilize um dispositivo físico ou emulador Android para rodar o app.
-4. **Verifique as dependências:**
-   - Certifique-se de que as dependências do Firebase, Glide e ViewBinding estão configuradas no `build.gradle`.
+3. **Aplicativo Android**
+     - **Abra o projeto no Android Studio:**
+       - Certifique-se de ter o Android Studio instalado.
+         
+     - **Execute o aplicativo:**
+       - Certifique-se de que a URL base da API no código Java está apontando para http://<IP_LOCAL>:8080 (ou utilize 10.0.2.2 para emulador).
+         
+     - **Verifique as dependências:**
+       - Certifique-se de que as dependências do Firebase, Glide e ViewBinding estão configuradas no `build.gradle`.
+         
+     - **Rode o app em um dispositivo físico ou emulador**
 
 ---
 
@@ -168,10 +175,10 @@ Para proteger a escrita no Firebase Realtime Database, o aplicativo utiliza uma 
 
 ### 📍 Onde configurar
 
-A constante `SECRET_KEY` está localizada no arquivo `DetailActivity.java`, na linha:
+A constante `SECRET_KEY` está localizada no arquivo `src/main/java/br/com/redeancora/api/controller/PecaController.java`, na linha:
 
 ```java
-final String SECRET_KEY = "ADICIONAR_SECRET_KEY"; //ADICIONAR A SECRET KEY AQUI
+private final String SECRET_KEY = "SECRE_KEY_AQUI"; // mesma chave do app
 ```
 
 > 🔐 Substitua `"ADICIONAR_SECRET_KEY"` pela mesma chave usada nas regras do Firebase.
