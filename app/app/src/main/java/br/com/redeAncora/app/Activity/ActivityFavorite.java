@@ -4,23 +4,14 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
-
-
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.redeAncora.app.Adapter.PecasAdapter;
 import br.com.redeAncora.app.Domain.PecasDomain;
-import br.com.redeAncora.app.R;
+
 import br.com.redeAncora.app.Services.ApiService;
 import br.com.redeAncora.app.Services.RetrofitClient;
 import br.com.redeAncora.app.databinding.ActivityFavoriteBinding;
