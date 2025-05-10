@@ -49,23 +49,51 @@ O projeto nasceu a partir da necessidade de **facilitar o relacionamento entre m
 
 ```
 📁 aplicativo-rede-ancora/
-├── api/ # Projeto Spring Boot
-📁 br.com.redeAncora.app
-├── Activity/
-│   ├── IntroActivity.java
-│   ├── MainActivity.java
-│   ├── DetailActivity.java
-│   ├── ActivityFavorite.java
-│   ├── ProfileActivity.java
-│   └── BaseActivity.java
-├── Adapter/
-│   ├── PecasAdapter.java
-│   └── CategoryAdapter.java
-├── Domain/
-│   ├── PecasDomain.java
-│   └── CategoryDomain.java
-├── res/layout/         (layouts XML utilizados com ViewBinding)
-└── Firebase/           (configuração do Realtime Database & Storage)
+├── 📁 app/                              # Aplicativo Android
+│   ├── 📁 br.com.redeAncora.app/
+│   │   ├── 📁 Activity/
+│   │   │   ├── IntroActivity.java
+│   │   │   ├── MainActivity.java
+│   │   │   ├── DetailActivity.java
+│   │   │   ├── ActivityFavorite.java
+│   │   │   ├── ProfileActivity.java
+│   │   │   └── BaseActivity.java
+│   │   ├── 📁 Adapter/
+│   │   │   ├── PecasAdapter.java
+│   │   │   └── CategoryAdapter.java
+│   │   ├── 📁 Domain/
+│   │   │   ├── PecasDomain.java
+│   │   │   └── CategoryDomain.java
+│   │   ├── 📁 Services/
+│   │   │   ├── ApiService.java
+│   │   │   └── RetrofitClient.java
+│   │   ├── 📁 dto/
+│   │   │   ├── PecaDTO.java
+│   │   │   └── CategoriaDTO.java
+│   │   ├── 📁 res/
+│   │   │   └── layout/                # Layouts XML utilizados com ViewBinding
+│   └── └── Firebase/                 # Configuração do Firebase no app
+│
+├── 📁 api/                              # API Spring Boot
+│   ├── 📁 br.com.redeancora.api/
+│   │   ├── ApiApplication.java        # Classe principal da aplicação Spring
+│   │   ├── 📁 config/
+│   │   │   └── FirebaseConfig.java    # Inicialização do Firebase SDK
+│   │   ├── 📁 controller/
+│   │   │   └── PecaController.java    # Endpoints REST da API (COLOCAR SECRET_KEY aqui)
+│   │   ├── 📁 dto/
+│   │   │   ├── PecaDTO.java
+│   │   │   └── CategoriaDTO.java
+│   │   └── 📁 service/
+│   │       └── FirebaseService.java   # Integração com Realtime Database do Firebase
+│   └── 📁 resources/
+│       ├── application.properties     # Configurações Spring
+│       └── firebase-service-account.json (NÃO COMITAR!) 🔒
+│
+├── .gitignore
+├── README.md
+├── build.gradle / build.gradle.kts
+└── settings.gradle / settings.gradle.kts
 ```
 
 ---
