@@ -113,6 +113,14 @@ O projeto nasceu a partir da necessidade de **facilitar o relacionamento entre m
 
 ## 🧰 Tecnologias Utilizadas
 
+### 🔧 Backend
+- **Spring Boot**
+- **Firebase Admin SDK**
+- **Jackson**
+- **RestTemplate / WebClient**
+- **Maven**
+
+### 📱 Mobile
 - **Android Studio + Java**
 - **Firebase Realtime Database & Storage**
 - **ViewBinding** para gerenciamento seguro dos layouts
@@ -122,13 +130,29 @@ O projeto nasceu a partir da necessidade de **facilitar o relacionamento entre m
 ---
 
 
-
 ## 🧪 Como Rodar o Projeto
+
 
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/RafaelDevProjects/appMobileRedeAncora.git
    ```
+### 1. Backend (Spring Boot)
+```bash
+cd api/
+```
+- Coloque seu arquivo firebase-service-account.json em src/main/resources/
+- Verifique se a SECRET_KEY está configurada corretamente nas regras do Firebase e no código da API
+Execute a aplicação:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
+A API estará acessível por padrão em:
+```http://localhost:8080/api/pecas```
+```http://localhost:8080/api/categorias```
+```http://localhost:8080/api/favoritas```
+   
+### 1. Aplicativo Android (Spring Boot)
 2. **Abra o projeto no Android Studio:**
    - Certifique-se de ter o Android Studio instalado.
 3. **Execute o aplicativo:**
