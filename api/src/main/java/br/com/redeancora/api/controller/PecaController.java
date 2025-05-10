@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutionException;
 public class PecaController {
 
     private final FirebaseService service;
-    private final String SECRET_KEY = "rede_ancora_secret_key"; // mesma chave do app
+    private final String SECRET_KEY = "SECRET AQUI"; // mesma chave do app
 
 
     public PecaController(FirebaseService service) {
