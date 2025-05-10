@@ -1,0 +1,88 @@
+# Ignorar arquivos de compilação do Java
+target/
+*.class
+
+# Ignorar arquivos de build do Android Studio
+/.idea/
+/*.iml
+.gradle/
+/build/
+
+# Ignorar configurações locais do Android Studio
+.local/
+*.log
+
+# Ignorar arquivos específicos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos temporários do Maven
+.mvn/
+
+# Ignorar arquivos de dependências do Spring Boot
+/.mvn/
+/target/
+/.settings/
+
+# Ignorar arquivos de configuração do IntelliJ
+.idea/
+
+# Ignorar dependências locais e bibliotecas que são baixadas pelo Maven ou Gradle
+/.gradle/
+/node_modules/
+*.jar
+*.war
+
+# Ignorar arquivos de configuração do Firebase
+firebase.json
+api/src/main/resources/firebase-service-account.json
+
+
+# Ignorar arquivos de configuração de containers, caso haja
+docker-compose.yml
+Dockerfile
+
+# Ignorar arquivos do ambiente virtual Python (se houver integração Python)
+venv/
+*.pyc
+__pycache__/
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar arquivos temporários do sistema operacional (Windows, Linux)
+*~
+
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
